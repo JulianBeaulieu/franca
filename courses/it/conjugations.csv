@@ -1,0 +1,100 @@
+base_verb,english_meaning,ana,ni7na,inta,inte,into,huwe,hiyye,hinne
+essere,to be,sono,siamo,sei,sei,siete,è,è,sono
+avere,to have,ho,abbiamo,hai,hai,avete,ha,ha,hanno
+fare,to do/to make,faccio,facciamo,fai,fai,fate,fa,fa,fanno
+dire,to say,dico,diciamo,dici,dici,dite,dice,dice,dicono
+andare,to go,vado,andiamo,vai,vai,andate,va,va,vanno
+potere,to be able to/can,posso,possiamo,puoi,puoi,potete,può,può,possono
+volere,to want,voglio,vogliamo,vuoi,vuoi,volete,vuole,vuole,vogliono
+dovere,to have to/must,devo,dobbiamo,devi,devi,dovete,deve,deve,devono
+sapere,to know,so,sappiamo,sai,sai,sapete,sa,sa,sanno
+vedere,to see,vedo,vediamo,vedi,vedi,vedete,vede,vede,vedono
+dare,to give,do,diamo,dai,dai,date,dà,dà,danno
+stare,to stay/to be,sto,stiamo,stai,stai,state,sta,sta,stanno
+uscire,to go out,esco,usciamo,esci,esci,uscite,esce,esce,escono
+venire,to come,vengo,veniamo,vieni,vieni,venite,viene,viene,vengono
+parlare,to speak,parlo,parliamo,parli,parli,parlate,parla,parla,parlano
+prendere,to take,prendo,prendiamo,prendi,prendi,prendete,prende,prende,prendono
+trovare,to find,trovo,troviamo,trovi,trovi,trovate,trova,trova,trovano
+lasciare,to leave/to let,lascio,lasciamo,lasci,lasci,lasciate,lascia,lascia,lasciano
+pensare,to think,penso,pensiamo,pensi,pensi,pensate,pensa,pensa,pensano
+passare,to pass/to spend time,passo,passiamo,passi,passi,passate,passa,passa,passano
+mettere,to put,metto,mettiamo,metti,metti,mettete,mette,mette,mettono
+portare,to bring/to carry,porto,portiamo,porti,porti,portate,porta,porta,portano
+tenere,to hold/to keep,tengo,teniamo,tieni,tieni,tenete,tiene,tiene,tengono
+capire,to understand,capisco,capiamo,capisci,capisci,capite,capisce,capisce,capiscono
+sentire,to hear/to feel,sento,sentiamo,senti,senti,sentite,sente,sente,sentono
+guardare,to watch/to look,guardo,guardiamo,guardi,guardi,guardate,guarda,guarda,guardano
+chiedere,to ask,chiedo,chiediamo,chiedi,chiedi,chiedete,chiede,chiede,chiedono
+rispondere,to answer,rispondo,rispondiamo,rispondi,rispondi,rispondete,risponde,risponde,rispondono
+cercare,to look for,cerco,cerchiamo,cerchi,cerchi,cercate,cerca,cerca,cercano
+mangiare,to eat,mangio,mangiamo,mangi,mangi,mangiate,mangia,mangia,mangiano
+bere,to drink,bevo,beviamo,bevi,bevi,bevete,beve,beve,bevono
+dormire,to sleep,dormo,dormiamo,dormi,dormi,dormite,dorme,dorme,dormono
+lavorare,to work,lavoro,lavoriamo,lavori,lavori,lavorate,lavora,lavora,lavorano
+studiare,to study,studio,studiamo,studi,studi,studiate,studia,studia,studiano
+imparare,to learn,imparo,impariamo,impari,impari,imparate,impara,impara,imparano
+scrivere,to write,scrivo,scriviamo,scrivi,scrivi,scrivete,scrive,scrive,scrivono
+leggere,to read,leggo,leggiamo,leggi,leggi,leggete,legge,legge,leggono
+camminare,to walk,cammino,camminiamo,cammini,cammini,camminate,cammina,cammina,camminano
+correre,to run,corro,corriamo,corri,corri,correte,corre,corre,corrono
+arrivare,to arrive,arrivo,arriviamo,arrivi,arrivi,arrivate,arriva,arriva,arrivano
+partire,to leave/to depart,parto,partiamo,parti,parti,partite,parte,parte,partono
+tornare,to return,torno,torniamo,torni,torni,tornate,torna,torna,tornano
+entrare,to enter,entro,entriamo,entri,entri,entrate,entra,entra,entrano
+salire,to go up/to get on,salgo,saliamo,sali,sali,salite,sale,sale,salgono
+scendere,to go down/to get off,scendo,scendiamo,scendi,scendi,scendete,scende,scende,scendono
+comprare,to buy,compro,compriamo,compri,compri,comprate,compra,compra,comprano
+vendere,to sell,vendo,vendiamo,vendi,vendi,vendete,vende,vende,vendono
+pagare,to pay,pago,paghiamo,paghi,paghi,pagate,paga,paga,pagano
+costare,to cost,costo,costiamo,costi,costi,costate,costa,costa,costano
+aprire,to open,apro,apriamo,apri,apri,aprite,apre,apre,aprono
+chiudere,to close,chiudo,chiudiamo,chiudi,chiudi,chiudete,chiude,chiude,chiudono
+cominciare,to begin/to start,comincio,cominciamo,cominci,cominci,cominciate,comincia,comincia,cominciano
+finire,to finish,finisco,finiamo,finisci,finisci,finite,finisce,finisce,finiscono
+continuare,to continue,continuo,continuiamo,continui,continui,continuate,continua,continua,continuano
+aiutare,to help,aiuto,aiutiamo,aiuti,aiuti,aiutate,aiuta,aiuta,aiutano
+lavare,to wash,lavo,laviamo,lavi,lavi,lavate,lava,lava,lavano
+pulire,to clean,pulisco,puliamo,pulisci,pulisci,pulite,pulisce,pulisce,puliscono
+cucinare,to cook,cucino,cuciniamo,cucini,cucini,cucinate,cucina,cucina,cucinano
+giocare,to play,gioco,giochiamo,giochi,giochi,giocate,gioca,gioca,giocano
+vincere,to win,vinco,vinciamo,vinci,vinci,vincete,vince,vince,vincono
+perdere,to lose,perdo,perdiamo,perdi,perdi,perdete,perde,perde,perdono
+cambiare,to change,cambio,cambiamo,cambi,cambi,cambiate,cambia,cambia,cambiano
+provare,to try,provo,proviamo,provi,provi,provate,prova,prova,provano
+usare,to use,uso,usiamo,usi,usi,usate,usa,usa,usano
+credere,to believe,credo,crediamo,credi,credi,credete,crede,crede,credono
+sperare,to hope,spero,speriamo,speri,speri,sperate,spera,spera,sperano
+amare,to love,amo,amiamo,ami,ami,amate,ama,ama,amano
+odiare,to hate,odio,odiamo,odi,odi,odiate,odia,odia,odiano
+piacere,to like/to please,piaccio,piacciamo,piaci,piaci,piacete,piace,piace,piacciono
+ricordare,to remember,ricordo,ricordiamo,ricordi,ricordi,ricordate,ricorda,ricorda,ricordano
+dimenticare,to forget,dimentico,dimentichiamo,dimentichi,dimentichi,dimenticate,dimentica,dimentica,dimenticano
+spiegare,to explain,spiego,spieghiamo,spieghi,spieghi,spiegate,spiega,spiega,spiegano
+insegnare,to teach,insegno,insegniamo,insegni,insegni,insegnate,insegna,insegna,insegnano
+chiamare,to call/to name,chiamo,chiamiamo,chiami,chiami,chiamate,chiama,chiama,chiamano
+ascoltare,to listen,ascolto,ascoltiamo,ascolti,ascolti,ascoltate,ascolta,ascolta,ascoltano
+cantare,to sing,canto,cantiamo,canti,canti,cantate,canta,canta,cantano
+ridere,to laugh,rido,ridiamo,ridi,ridi,ridete,ride,ride,ridono
+nascere,to be born,nasco,nasciamo,nasci,nasci,nascete,nasce,nasce,nascono
+morire,to die,muoio,moriamo,muori,muori,morite,muore,muore,muoiono
+vivere,to live,vivo,viviamo,vivi,vivi,vivete,vive,vive,vivono
+abitare,to reside,abito,abitiamo,abiti,abiti,abitate,abita,abita,abitano
+viaggiare,to travel,viaggio,viaggiamo,viaggi,viaggi,viaggiate,viaggia,viaggia,viaggiano
+guidare,to drive,guido,guidiamo,guidi,guidi,guidate,guida,guida,guidano
+volare,to fly,volo,voliamo,voli,voli,volate,vola,vola,volano
+alzarsi,to get up,mi alzo,ci alziamo,ti alzi,ti alzi,vi alzate,si alza,si alza,si alzano
+sedersi,to sit down,mi siedo,ci sediamo,ti siedi,ti siedi,vi sedete,si siede,si siede,si siedono
+vestirsi,to get dressed,mi vesto,ci vestiamo,ti vesti,ti vesti,vi vestite,si veste,si veste,si vestono
+lavarsi,to wash oneself,mi lavo,ci laviamo,ti lavi,ti lavi,vi lavate,si lava,si lava,si lavano
+chiamarsi,to be called,mi chiamo,ci chiamiamo,ti chiami,ti chiami,vi chiamate,si chiama,si chiama,si chiamano
+sentirsi,to feel,mi sento,ci sentiamo,ti senti,ti senti,vi sentite,si sente,si sente,si sentono
+incontrare,to meet,incontro,incontriamo,incontri,incontri,incontrate,incontra,incontra,incontrano
+conoscere,to know a person,conosco,conosciamo,conosci,conosci,conoscete,conosce,conosce,conoscono
+salutare,to greet,saluto,salutiamo,saluti,saluti,salutate,saluta,saluta,salutano
+decidere,to decide,decido,decidiamo,decidi,decidi,decidete,decide,decide,decidono
+scegliere,to choose,scelgo,scegliamo,scegli,scegli,scegliete,sceglie,sceglie,scelgono
+preferire,to prefer,preferisco,preferiamo,preferisci,preferisci,preferite,preferisce,preferisce,preferiscono
+servire,to serve/to be useful,servo,serviamo,servi,servi,servite,serve,serve,servono
+restare,to remain,resto,restiamo,resti,resti,restate,resta,resta,restano
+diventare,to become,divento,diventiamo,diventi,diventi,diventate,diventa,diventa,diventano

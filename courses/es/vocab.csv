@@ -1,0 +1,672 @@
+spanish_word,english_translation
+que,that/which
+de,of/from
+no,no/not
+a,to/at
+la,the/her/it
+el,the
+y,and
+en,in/on/at
+lo,it/him
+un,a/an
+por,for/by
+qué,what
+me,me/myself
+una,a/an
+te,you/yourself
+los,the/them
+se,himself/herself/themselves
+con,with
+para,for/in order to
+mi,my
+si,if
+bien,well/fine
+pero,but
+yo,I
+eso,that
+las,the/them
+sí,yes
+su,his/her/their
+tu,your
+aquí,here
+del,of the
+al,to the
+como,as/like/how
+le,to him/her/you
+más,more/most
+esto,this
+ya,already/now
+todo,all/everything
+esta,this
+muy,very
+hay,there is/there are
+ahora,now
+algo,something
+nos,us/ourselves
+tú,you
+nada,nothing
+cuando,when
+este,this
+así,like this/so
+cómo,how
+solo,only/alone
+gracias,thank you
+o,or
+él,he/him
+bueno,good/well
+todos,everyone/all
+vez,time/occasion
+ella,she/her
+ese,that
+hola,hello
+sus,his/her/their
+porque,because
+dios,god
+quién,who
+nunca,never
+dónde,where
+casa,house/home
+esa,that
+dos,two
+tan,so
+señor,mister/sir
+tiempo,time/weather
+verdad,truth
+mejor,better/best
+hombre,man
+usted,you (formal)
+mucho,much/a lot
+entonces,then/so
+ahí,there
+ti,you
+vida,life
+alguien,someone
+hasta,until/up to
+sin,without
+mí,me
+sobre,on/about
+uno,one
+siempre,always
+también,also/too
+antes,before
+ni,nor
+día,day
+noche,night
+nadie,no one
+nosotros,we
+poco,little/few
+padre,father
+trabajo,work/job
+gente,people
+mismo,same/self
+ellos,they
+dinero,money
+hijo,son/child
+tal,such
+otro,other/another
+seguro,sure/safe
+claro,clear/of course
+lugar,place
+mundo,world
+amigo,friend
+después,after/afterward
+momento,moment
+desde,from/since
+fuera,outside
+cosa,thing
+tipo,type/kind
+mañana,tomorrow/morning
+estado,state/condition
+acuerdo,agreement
+papá,dad
+mío,mine
+nuestro,our
+nuevo,new
+nombre,name
+tres,three
+menos,less/least
+mal,badly/bad
+conmigo,with me
+madre,mother
+hoy,today
+quien,who
+mamá,mom
+luego,then/later
+allí,there
+hora,hour/time
+mujer,woman
+tarde,afternoon/late
+parte,part
+problema,problem
+aún,still/yet
+tanto,so much
+razón,reason
+ustedes,you all
+idea,idea
+quizás,maybe/perhaps
+alguno,some/any
+cierto,certain/true
+muerto,dead
+policía,police
+realmente,really
+demasiado,too much
+familia,family
+cabeza,head
+chica,girl
+cariño,darling/affection
+lado,side
+allá,over there
+entre,between/among
+minuto,minute
+serio,serious
+cuidado,care/careful
+amor,love
+puerta,door
+suerte,luck
+rápido,fast/quickly
+cuenta,bill/account
+pues,well/so
+pasado,past
+todavía,still/yet
+hermano,brother
+casi,almost
+forma,form/way
+chico,boy
+abrir,to open
+acabar,to finish/end
+aceptar,to accept
+alcanzar,to reach
+aparecer,to appear
+ayudar,to help
+buscar,to look for
+caer,to fall
+cambiar,to change
+comenzar,to begin
+comprender,to understand
+conocer,to know (a person/place)
+conseguir,to get/obtain
+considerar,to consider
+contar,to count/tell
+convertir,to convert/turn into
+correr,to run
+crear,to create
+creer,to believe
+cumplir,to fulfill/turn (an age)
+dar,to give
+deber,to have to/should
+decir,to say/tell
+dejar,to leave/let
+descubrir,to discover
+dirigir,to direct/manage
+empezar,to begin/start
+encontrar,to find
+entender,to understand
+entrar,to enter
+escribir,to write
+escuchar,to listen
+esperar,to wait/hope
+estar,to be (temporary/location)
+estudiar,to study
+existir,to exist
+explicar,to explain
+formar,to form
+ganar,to win/earn
+gustar,to like/please
+haber,to have (auxiliary)
+hablar,to speak/talk
+hacer,to do/make
+intentar,to try
+ir,to go
+jugar,to play
+leer,to read
+levantar,to raise/lift
+llamar,to call
+llegar,to arrive
+llevar,to carry/wear
+lograr,to achieve/manage to
+mantener,to maintain/keep
+mirar,to look/watch
+morir,to die
+nacer,to be born
+necesitar,to need
+ocurrir,to occur/happen
+ofrecer,to offer
+oír,to hear
+pagar,to pay
+parar,to stop
+parecer,to seem
+partir,to leave/depart
+pasar,to happen/pass
+pedir,to ask for/order
+perder,to lose
+permitir,to allow
+poder,to be able to/can
+poner,to put
+preguntar,to ask
+presentar,to present/introduce
+producir,to produce
+quedar,to stay/remain
+querer,to want/love
+realizar,to carry out/achieve
+recibir,to receive
+reconocer,to recognize
+recordar,to remember
+resultar,to turn out/result
+saber,to know (a fact/how to)
+sacar,to take out
+salir,to go out/leave
+seguir,to follow/continue
+sentir,to feel
+ser,to be (permanent)
+servir,to serve
+suponer,to suppose
+tener,to have
+terminar,to finish/end
+tocar,to touch/play (an instrument)
+tomar,to take/drink
+trabajar,to work
+traer,to bring
+tratar,to try/treat
+utilizar,to use
+venir,to come
+ver,to see
+vivir,to live
+volver,to return
+comer,to eat
+beber,to drink
+dormir,to sleep
+cerrar,to close
+aprender,to learn
+enseñar,to teach
+cantar,to sing
+bailar,to dance
+viajar,to travel
+manejar,to drive
+nadar,to swim
+volar,to fly
+limpiar,to clean
+cocinar,to cook
+preparar,to prepare
+cortar,to cut
+subir,to go up/climb
+bajar,to go down/lower
+construir,to build
+romper,to break
+arreglar,to fix
+olvidar,to forget
+decidir,to decide
+mostrar,to show
+significar,to mean
+interesar,to interest
+molestar,to bother
+prometer,to promise
+continuar,to continue
+comparar,to compare
+describir,to describe
+elegir,to choose
+imaginar,to imagine
+soñar,to dream
+celebrar,to celebrate
+invitar,to invite
+descansar,to rest
+cuidar,to take care of
+proteger,to protect
+resolver,to solve
+mejorar,to improve
+aumentar,to increase
+amar,to love (deeply)
+desear,to wish/desire
+crecer,to grow
+visitar,to visit
+reír,to laugh
+llorar,to cry
+sonreír,to smile
+usar,to use
+comprar,to buy
+vender,to sell
+enviar,to send
+adiós,goodbye
+buenos días,good morning
+buenas noches,good night
+buenas tardes,good afternoon
+de nada,you're welcome
+lo siento,I'm sorry
+por favor,please
+semana,week
+mes,month
+año,year
+fin de semana,weekend
+temprano,early
+pronto,soon
+despacio,slowly
+cerca,near
+lejos,far
+arriba,up/above
+abajo,down/below
+adelante,forward/ahead
+atrás,back/behind
+dentro,inside
+alrededor,around
+tampoco,neither
+cuatro,four
+cinco,five
+seis,six
+siete,seven
+ocho,eight
+nueve,nine
+diez,ten
+once,eleven
+doce,twelve
+veinte,twenty
+treinta,thirty
+cuarenta,forty
+cincuenta,fifty
+cien,hundred
+mil,thousand
+millón,million
+primero,first
+segundo,second
+tercero,third
+último,last
+hermana,sister
+abuelo,grandfather
+abuela,grandmother
+tío,uncle
+tía,aunt
+primo,cousin
+prima,cousin (female)
+esposo,husband
+esposa,wife
+novio,boyfriend
+novia,girlfriend
+niño,boy/child
+niña,girl
+hija,daughter
+nieto,grandson
+nieta,granddaughter
+pareja,partner/couple
+agua,water
+pan,bread
+leche,milk
+café,coffee
+té,tea
+vino,wine
+cerveza,beer
+jugo,juice
+carne,meat
+pollo,chicken
+pescado,fish
+huevo,egg
+queso,cheese
+arroz,rice
+fruta,fruit
+verdura,vegetable
+manzana,apple
+naranja,orange
+plátano,banana
+tomate,tomato
+papa,potato
+cebolla,onion
+azúcar,sugar
+sal,salt
+aceite,oil
+comida,food/meal
+desayuno,breakfast
+almuerzo,lunch
+cena,dinner
+postre,dessert
+sopa,soup
+ensalada,salad
+helado,ice cream
+chocolate,chocolate
+dulce,candy/sweet
+restaurante,restaurant
+cuarto,room
+habitación,bedroom/room
+cocina,kitchen
+baño,bathroom
+ventana,window
+mesa,table
+silla,chair
+cama,bed
+sofá,couch
+pared,wall
+techo,roof/ceiling
+piso,floor
+jardín,garden
+garaje,garage
+llave,key
+espejo,mirror
+lámpara,lamp
+armario,closet
+toalla,towel
+jabón,soap
+ojo,eye
+oreja,ear
+nariz,nose
+boca,mouth
+diente,tooth
+mano,hand
+brazo,arm
+pierna,leg
+pie,foot
+dedo,finger/toe
+corazón,heart
+espalda,back
+cuello,neck
+pelo,hair
+cara,face
+piel,skin
+sangre,blood
+hueso,bone
+estómago,stomach
+ropa,clothes
+camisa,shirt
+pantalón,pants
+falda,skirt
+vestido,dress
+zapato,shoe
+calcetín,sock
+chaqueta,jacket
+abrigo,coat
+sombrero,hat
+guante,glove
+cinturón,belt
+bolsa,bag/purse
+rojo,red
+azul,blue
+verde,green
+amarillo,yellow
+negro,black
+blanco,white
+gris,gray
+rosado,pink
+morado,purple
+marrón,brown
+sol,sun
+luna,moon
+estrella,star
+cielo,sky
+lluvia,rain
+viento,wind
+nieve,snow
+nube,cloud
+calor,heat
+frío,cold
+clima,climate/weather
+tormenta,storm
+árbol,tree
+flor,flower
+planta,plant
+hierba,grass
+montaña,mountain
+río,river
+mar,sea
+playa,beach
+bosque,forest
+tierra,earth/land
+piedra,stone/rock
+fuego,fire
+aire,air
+animal,animal
+perro,dog
+gato,cat
+pájaro,bird
+pez,fish (animal)
+caballo,horse
+vaca,cow
+cerdo,pig
+gallina,hen
+oveja,sheep
+ratón,mouse
+león,lion
+oso,bear
+mono,monkey
+insecto,insect
+mosca,fly
+abeja,bee
+serpiente,snake
+tigre,tiger
+elefante,elephant
+ciudad,city
+país,country
+pueblo,town/village
+calle,street
+carretera,road/highway
+escuela,school
+universidad,university
+oficina,office
+tienda,store/shop
+mercado,market
+hospital,hospital
+iglesia,church
+parque,park
+banco,bank
+aeropuerto,airport
+estación,station
+hotel,hotel
+edificio,building
+puente,bridge
+esquina,corner
+maestro,teacher
+maestra,teacher (female)
+profesor,professor/teacher
+estudiante,student
+libro,book
+papel,paper
+lápiz,pencil
+bolígrafo,pen
+cuaderno,notebook
+clase,class
+examen,exam/test
+tarea,homework
+pregunta,question
+respuesta,answer
+palabra,word
+idioma,language
+número,number
+historia,history/story
+teléfono,phone
+computadora,computer
+internet,internet
+correo,mail/email
+carta,letter
+mensaje,message
+noticia,news
+periódico,newspaper
+televisión,television
+música,music
+canción,song
+película,movie
+foto,photo
+médico,doctor
+enfermo,sick
+salud,health
+dolor,pain
+medicina,medicine
+enfermedad,illness
+receta,prescription/recipe
+precio,price
+regalo,gift
+tarjeta,card
+grande,big
+pequeño,small
+alto,tall/high
+bajo,short/low
+joven,young
+feliz,happy
+triste,sad
+cansado,tired
+ocupado,busy
+fácil,easy
+difícil,difficult
+importante,important
+diferente,different
+lento,slow
+caliente,hot
+limpio,clean
+sucio,dirty
+bonito,pretty
+feo,ugly
+fuerte,strong
+débil,weak
+rico,rich/delicious
+pobre,poor
+largo,long
+corto,short (length)
+ancho,wide
+estrecho,narrow
+gordo,fat
+delgado,thin
+guapo,handsome/attractive
+inteligente,intelligent
+tonto,silly/foolish
+amable,kind
+simpático,nice/friendly
+aburrido,boring/bored
+divertido,fun
+interesante,interesting
+peligroso,dangerous
+libre,free
+lleno,full
+vacío,empty
+oscuro,dark
+suave,soft
+duro,hard/tough
+viejo,old
+felicidad,happiness
+miedo,fear
+enojo,anger
+sorpresa,surprise
+alegría,joy
+lunes,Monday
+martes,Tuesday
+miércoles,Wednesday
+jueves,Thursday
+viernes,Friday
+sábado,Saturday
+domingo,Sunday
+primavera,spring
+verano,summer
+otoño,autumn/fall
+invierno,winter
+tren,train
+avión,airplane
+autobús,bus
+coche,car
+barco,boat/ship
+bicicleta,bicycle
+billete,ticket
+maleta,suitcase
+pasaporte,passport
+viaje,trip/journey
+centro,center/downtown
+caro,expensive
+barato,cheap
+cuánto,how much
+cuántos,how many
+lavar,to wash
+color,color
+favorito,favorite
+hambre,hunger
+sed,thirst

@@ -1,0 +1,30 @@
+# db/dex.config.yaml
+issuer: http://dex:5556/dex          # MUST equal OIDC_ISSUER exactly
+storage:
+  type: memory                       # dev/CI only; state resets on restart
+web:
+  http: 0.0.0.0:5556
+oauth2:
+  skipApprovalScreen: true
+staticClients:
+  - id: franca
+    name: Franca
+    secret: franca-dev-secret
+    redirectURIs:
+      - http://localhost:3000/api/auth/callback/oidc
+enablePasswordDB: true
+staticPasswords:
+  # password for all three is "password". Regenerate a hash with:
+  #   htpasswd -bnBC 10 "" password | tr -d ':\n'
+  - email: "alice@franca.test"
+    hash: "$2a$10$2b2cU8CPhOTaGrs1HRQuAueS7JTT5ZHsHSzYiFPm1leZck7Mc8T4W"
+    username: "alice"
+    userID: "u-alice-0001"
+  - email: "bob@franca.test"
+    hash: "$2a$10$2b2cU8CPhOTaGrs1HRQuAueS7JTT5ZHsHSzYiFPm1leZck7Mc8T4W"
+    username: "bob"
+    userID: "u-bob-0002"
+  - email: "carol@franca.test"
+    hash: "$2a$10$2b2cU8CPhOTaGrs1HRQuAueS7JTT5ZHsHSzYiFPm1leZck7Mc8T4W"
+    username: "carol"
+    userID: "u-carol-0003"

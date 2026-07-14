@@ -1,0 +1,76 @@
+# Pin the Compose project name so the stack (and its named volume) is stable
+# regardless of the directory it runs from.
+name: franca
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: franca-db
+    environment:
+      POSTGRES_DB: franca
+      POSTGRES_USER: franca
+      POSTGRES_PASSWORD: franca
+    volumes:
+      - franca-pgdata:/var/lib/postgresql/data
+    ports:
+      # loopback-only; host-run e2e smoke needs it — do not expose on LAN
+      - '127.0.0.1:5432:5432'
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U franca -d franca']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    networks: [franca]
+
+  dex:
+    image: dexidp/dex:v2.41.1        # pin; verify latest tag before bumping
+    container_name: franca-dex
+    command: ['dex', 'serve', '/etc/dex/config.yaml']
+    ports:
+      - '5556:5556'                  # browser reaches dex via published host port
+    volumes:
+      - ./db/dex.config.yaml:/etc/dex/config.yaml:ro
+    networks: [franca]
+
+  app:
+    build: .
+    container_name: franca-app
+    depends_on:
+      db:
+        condition: service_healthy
+      dex:
+        condition: service_started
+    environment:
+      DATABASE_URL: postgres://franca:franca@db:5432/franca
+      NEXT_PUBLIC_BASE_URL: http://localhost:3000
+      # --- Auth (dev defaults; override in prod with Authentik values) ---
+      AUTH_SECRET: ${AUTH_SECRET:-dev-only-secret-change-me-0123456789abcdef}
+      OIDC_ISSUER: ${OIDC_ISSUER:-http://dex:5556/dex}
+      OIDC_CLIENT_ID: ${OIDC_CLIENT_ID:-franca}
+      OIDC_CLIENT_SECRET: ${OIDC_CLIENT_SECRET:-franca-dev-secret}
+      # AUTH_URL optional; trustHost:true covers LAN. Set behind a proxy in prod.
+      # --- Seeding: legacy single-course contract (preserved) ---
+      VOCAB_CSV_PATH: /data/vocab.csv
+      SENTENCES_CSV_PATH: /data/sentences.csv
+      CONJUGATIONS_CSV_PATH: /data/conjugations.csv
+      # --- Seeding: multi-course directory convention ---
+      # Baked courses (/app/courses) first, then the bind-mounted user dir
+      # (/data/courses) — later dir wins on a duplicate course code, so your
+      # mounted courses override the baked de/es/fr/it without losing them.
+      COURSES_DIR_PATH: /app/courses:/data/courses
+      # --- Dev-only: provision a deterministic smoke learner (Task 16) ---
+      SEED_SMOKE_LEARNER: ${SEED_SMOKE_LEARNER:-1}
+    volumes:
+      - ${VOCAB_CSV:-./vocab.csv}:/data/vocab.csv:ro
+      - ${SENTENCES_CSV:-./sentences.csv}:/data/sentences.csv:ro
+      - ${CONJUGATIONS_CSV:-./conjugations.csv}:/data/conjugations.csv:ro
+      - ${COURSES_DIR:-./courses}:/data/courses:ro
+    ports:
+      - '3000:3000'
+    networks: [franca]
+
+volumes:
+  franca-pgdata:
+
+networks:
+  franca: {}

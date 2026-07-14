@@ -1,0 +1,642 @@
+arabizi_word,english_translation
+je,I
+tu,you
+il,he
+elle,she
+nous,we
+vous,you
+ils,they
+elles,they
+on,we
+moi,me
+toi,you
+lui,him
+eux,them
+le,the
+la,the
+les,the
+un,a/one
+une,a/one
+des,some
+du,some
+de,of/from
+à,to/at
+et,and
+ou,or
+mais,but
+donc,so/therefore
+car,because
+ne,not
+pas,not
+ce,this/that
+cette,this
+ces,these
+cet,this
+mon,my
+ma,my
+mes,my
+ton,your
+ta,your
+tes,your
+son,his/her
+sa,his/her
+ses,his/her
+notre,our
+nos,our
+votre,your
+vos,your
+leur,their
+leurs,their
+qui,who
+que,that/what
+quoi,what
+où,where
+quand,when
+comment,how
+pourquoi,why
+combien,how much/how many
+quel,which
+quelle,which
+avec,with
+sans,without
+pour,for
+dans,in
+sur,on
+sous,under
+entre,between
+chez,at the home of
+vers,toward
+depuis,since/for
+pendant,during
+après,after
+avant,before
+toujours,always
+jamais,never
+souvent,often
+parfois,sometimes
+déjà,already
+encore,again/still
+aussi,also
+très,very
+trop,too much
+beaucoup,a lot
+peu,little
+assez,enough
+bien,well
+mal,badly
+oui,yes
+non,no
+peut-être,maybe
+merci,thank you
+s'il vous plaît,please
+pardon,sorry
+excusez-moi,excuse me
+bonjour,hello
+bonsoir,good evening
+au revoir,goodbye
+salut,hi/bye
+c'est,it is/this is
+il y a,there is/there are
+voici,here is
+voilà,there is
+maintenant,now
+ici,here
+là,there
+tout,all/everything
+tous,all
+toute,all
+toutes,all
+chaque,each
+plusieurs,several
+quelques,a few
+même,same/even
+autre,other
+être,to be
+avoir,to have
+faire,to do/to make
+aller,to go
+dire,to say
+pouvoir,to be able to
+vouloir,to want
+savoir,to know
+voir,to see
+devoir,to have to/must
+venir,to come
+prendre,to take
+parler,to speak
+penser,to think
+trouver,to find
+donner,to give
+demander,to ask
+comprendre,to understand
+connaître,to know
+sortir,to go out
+entendre,to hear
+chercher,to look for
+aider,to help
+essayer,to try
+revenir,to come back
+jouer,to play
+finir,to finish
+perdre,to lose
+sentir,to feel/to smell
+rentrer,to go home
+vivre,to live
+rendre,to give back
+tenir,to hold
+oublier,to forget
+travailler,to work
+manger,to eat
+entrer,to enter
+devenir,to become
+commencer,to start
+payer,to pay
+ouvrir,to open
+changer,to change
+dormir,to sleep
+marcher,to walk
+envoyer,to send
+apprendre,to learn
+boire,to drink
+garder,to keep
+montrer,to show
+porter,to wear/to carry
+servir,to serve
+écrire,to write
+gagner,to win/to earn
+acheter,to buy
+lire,to read
+monter,to go up
+quitter,to leave
+toucher,to touch
+continuer,to continue
+répondre,to answer
+rencontrer,to meet
+fermer,to close
+compter,to count
+apporter,to bring
+décider,to decide
+vendre,to sell
+expliquer,to explain
+utiliser,to use
+recevoir,to receive
+préférer,to prefer
+offrir,to offer
+préparer,to prepare
+choisir,to choose
+conduire,to drive
+chanter,to sing
+présenter,to introduce
+accepter,to accept
+refuser,to refuse
+rire,to laugh
+inviter,to invite
+arriver,to arrive
+rester,to stay
+arrêter,to stop
+suivre,to follow
+falloir,to be necessary
+attendre,to wait
+laisser,to let/to leave
+appeler,to call
+partir,to leave
+mettre,to put
+courir,to run
+voyager,to travel
+regarder,to watch/to look at
+écouter,to listen
+aimer,to like/to love
+adorer,to adore
+détester,to hate
+espérer,to hope
+sourire,to smile
+pleurer,to cry
+danser,to dance
+nager,to swim
+tomber,to fall
+descendre,to go down
+zéro,zero
+deux,two
+trois,three
+quatre,four
+cinq,five
+six,six
+sept,seven
+huit,eight
+neuf,nine
+dix,ten
+onze,eleven
+douze,twelve
+treize,thirteen
+quatorze,fourteen
+quinze,fifteen
+seize,sixteen
+dix-sept,seventeen
+dix-huit,eighteen
+dix-neuf,nineteen
+vingt,twenty
+trente,thirty
+quarante,forty
+cinquante,fifty
+soixante,sixty
+soixante-dix,seventy
+quatre-vingts,eighty
+quatre-vingt-dix,ninety
+cent,hundred
+mille,thousand
+premier,first
+deuxième,second
+dernier,last
+jour,day
+semaine,week
+mois,month
+année,year
+heure,hour/time
+minute,minute
+seconde,second
+matin,morning
+après-midi,afternoon
+soir,evening
+nuit,night
+aujourd'hui,today
+demain,tomorrow
+hier,yesterday
+tôt,early
+tard,late
+printemps,spring
+été,summer
+automne,autumn
+hiver,winter
+anniversaire,birthday
+date,date
+week-end,weekend
+lundi,Monday
+mardi,Tuesday
+mercredi,Wednesday
+jeudi,Thursday
+vendredi,Friday
+samedi,Saturday
+dimanche,Sunday
+janvier,January
+février,February
+mars,March
+avril,April
+mai,May
+juin,June
+juillet,July
+août,August
+septembre,September
+octobre,October
+novembre,November
+décembre,December
+père,father
+mère,mother
+papa,dad
+maman,mom
+frère,brother
+sœur,sister
+fils,son
+fille,daughter/girl
+mari,husband
+femme,wife/woman
+enfant,child
+ami,friend
+amie,friend
+famille,family
+grand-père,grandfather
+grand-mère,grandmother
+oncle,uncle
+tante,aunt
+cousin,cousin
+cousine,cousin
+bébé,baby
+garçon,boy
+nourriture,food
+repas,meal
+petit-déjeuner,breakfast
+déjeuner,lunch
+dîner,dinner
+pain,bread
+eau,water
+lait,milk
+café,coffee
+thé,tea
+vin,wine
+bière,beer
+jus,juice
+fromage,cheese
+viande,meat
+poisson,fish
+poulet,chicken
+œuf,egg
+légume,vegetable
+fruit,fruit
+pomme,apple
+banane,banana
+fraise,strawberry
+tomate,tomato
+pomme de terre,potato
+carotte,carrot
+riz,rice
+pâtes,pasta
+soupe,soup
+sucre,sugar
+sel,salt
+poivre,pepper
+beurre,butter
+gâteau,cake
+chocolat,chocolate
+restaurant,restaurant
+cuisine,kitchen/cooking
+recette,recipe
+faim,hunger
+soif,thirst
+maison,house
+appartement,apartment
+chambre,bedroom
+salle de bain,bathroom
+salon,living room
+porte,door
+fenêtre,window
+table,table
+chaise,chair
+lit,bed
+canapé,sofa
+jardin,garden
+clé,key
+mur,wall
+toit,roof
+escalier,stairs
+garage,garage
+lampe,lamp
+miroir,mirror
+tapis,rug
+étagère,shelf
+placard,closet
+douche,shower
+tête,head
+visage,face
+œil,eye
+yeux,eyes
+main,hand
+bras,arm
+jambe,leg
+pied,foot
+doigt,finger
+dos,back
+ventre,stomach
+cœur,heart
+bouche,mouth
+nez,nose
+oreille,ear
+dent,tooth
+cheveux,hair
+cou,neck
+épaule,shoulder
+genou,knee
+peau,skin
+docteur,doctor
+médecin,doctor
+hôpital,hospital
+malade,sick
+maladie,illness
+médicament,medicine
+douleur,pain
+fièvre,fever
+pharmacie,pharmacy
+blessé,injured
+tousser,to cough
+guérir,to heal
+vêtement,clothing
+chemise,shirt
+pantalon,pants
+robe,dress
+jupe,skirt
+chaussure,shoe
+chaussette,sock
+manteau,coat
+veste,jacket
+chapeau,hat
+écharpe,scarf
+gant,glove
+ceinture,belt
+rouge,red
+bleu,blue
+vert,green
+jaune,yellow
+noir,black
+blanc,white
+gris,gray
+orange,orange
+rose,pink
+marron,brown
+violet,purple
+temps,weather/time
+soleil,sun
+pluie,rain
+neige,snow
+vent,wind
+nuage,cloud
+ciel,sky
+chaud,hot
+froid,cold
+orage,storm
+montagne,mountain
+mer,sea
+rivière,river
+lac,lake
+forêt,forest
+arbre,tree
+fleur,flower
+herbe,grass
+terre,earth/land
+plage,beach
+île,island
+campagne,countryside
+étoile,star
+lune,moon
+chien,dog
+chat,cat
+oiseau,bird
+cheval,horse
+vache,cow
+cochon,pig
+mouton,sheep
+poule,hen
+canard,duck
+lapin,rabbit
+souris,mouse
+serpent,snake
+insecte,insect
+abeille,bee
+papillon,butterfly
+grand,big/tall
+petit,small
+gros,fat/big
+mince,thin
+long,long
+court,short
+haut,high
+bas,low
+large,wide
+étroit,narrow
+bon,good
+mauvais,bad
+beau,beautiful
+belle,beautiful
+joli,pretty
+laid,ugly
+nouveau,new
+vieux,old
+jeune,young
+facile,easy
+difficile,difficult
+important,important
+intéressant,interesting
+ennuyeux,boring
+content,happy
+heureux,happy
+triste,sad
+fâché,angry
+fatigué,tired
+fort,strong
+faible,weak
+rapide,fast
+lent,slow
+propre,clean
+sale,dirty
+cher,expensive
+gratuit,free
+riche,rich
+pauvre,poor
+plein,full
+vide,empty
+travail,work
+bureau,office
+employé,employee
+patron,boss
+collègue,colleague
+école,school
+université,university
+professeur,teacher
+élève,pupil
+étudiant,student
+étudier,to study
+leçon,lesson
+livre,book
+cahier,notebook
+stylo,pen
+crayon,pencil
+papier,paper
+examen,exam
+note,grade/note
+classe,class
+salle de classe,classroom
+vacances,vacation
+diplôme,diploma
+métier,profession
+réunion,meeting
+devoirs,homework
+téléphone,telephone
+portable,cell phone
+ordinateur,computer
+internet,internet
+message,message
+site web,website
+réseau,network
+argent,money
+prix,price
+bon marché,cheap
+magasin,store
+marché,market
+caisse,checkout
+monnaie,change/currency
+facture,bill
+réduction,discount
+client,customer
+vendeur,salesperson
+achat,purchase
+voiture,car
+train,train
+avion,airplane
+bus,bus
+métro,subway
+vélo,bicycle
+bateau,boat
+taxi,taxi
+route,road
+rue,street
+ville,city
+pays,country
+village,village
+gare,train station
+aéroport,airport
+billet,ticket
+valise,suitcase
+passeport,passport
+carte,map/card
+voyage,trip
+Noël,Christmas
+Pâques,Easter
+fête,party/holiday
+cadeau,gift
+église,church
+dieu,god
+célébrer,to celebrate
+tradition,tradition
+peur,fear
+joie,joy
+colère,anger
+surprise,surprise
+en,in/to
+devant,in front of
+près,near
+loin,far
+par,by/per
+fois,time/occasion
+parce que,because
+ensemble,together
+contre,against
+gentil,kind
+prochain,next
+lourd,heavy
+calme,calm
+vite,quickly
+mieux,better
+retard,delay/lateness
+besoin,need
+âge,age
+an,year
+mariage,marriage/wedding
+enchanté,delighted
+français,French
+anglais,English
+voisin,neighbor
+problème,problem
+hôtel,hotel
+parc,park
+bibliothèque,library
+télévision,television
+musique,music
+football,soccer
+photo,photo
+film,movie
+te,you
+habiter,to live/to reside
+visiter,to visit
+coûter,to cost
+lever,to get up/to raise
+nettoyer,to clean
+pleuvoir,to rain
+neiger,to snow
+voler,to fly
+revoir,to see again
+journée,day
+y,there/of it
+rien,nothing
+bientôt,soon
+verre,glass
+délicieux,delicious
+prêt,ready
+menu,menu
+serveur,waiter

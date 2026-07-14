@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-green: #58cc02;
+  --color-primary-green-dark: #58a700;
+  --color-blue: #1cb0f6;
+  --color-blue-dark: #1899d6;
+  --color-red: #ff4b4b;
+  --color-red-dark: #ea2b2b;
+  --color-yellow: #ffc800;
+  --color-yellow-dark: #e6b400;
+  --color-orange: #ff9600;
+  --color-purple: #ce82ff;
+  --color-text: #4b4b4b;
+  --color-text-secondary: #777777;
+  --color-border: #e5e5e5;
+  --color-bg-subtle: #f7f7f7;
+  --color-bg: #ffffff;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+@layer components {
+  .btn-3d {
+    @apply inline-flex items-center justify-center rounded-2xl px-6 py-3 font-extrabold uppercase tracking-wide text-white transition-transform;
+    box-shadow: 0 4px 0 var(--btn-shadow);
+  }
+  .btn-3d:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--btn-shadow);
+  }
+  .btn-3d:disabled {
+    @apply cursor-not-allowed opacity-60;
+    box-shadow: 0 4px 0 var(--btn-shadow);
+  }
+}
+
+/* Mobile-first baseline. */
+html {
+  /* Prevent iOS text-size auto-inflation in landscape. */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Full dynamic-viewport height helper with a stable fallback (svh) first, then
+   the dynamic value as progressive enhancement (research: 100dvh can report a
+   stale value on iOS standalone cold-start; svh is a safe floor). */
+.min-h-screen-safe {
+  min-height: 100svh;
+}
+@supports (min-height: 100dvh) {
+  .min-h-screen-safe {
+    min-height: 100dvh;
+  }
+}
+
+/* Every 3D button and interactive game chip suppresses double-tap zoom + 300ms delay. */
+.btn-3d,
+button {
+  touch-action: manipulation;
+}
+
+/* Text inputs must be >= 16px so iOS Safari does not zoom on focus. */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* The tappable "next lesson" node gently pulses to draw the eye. Motion is
+   suppressed for users who prefer reduced motion. */
+@keyframes path-node-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+.path-node-active {
+  animation: path-node-pulse 1.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .path-node-active {
+    animation: none;
+  }
+}

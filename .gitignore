@@ -1,0 +1,21 @@
+# Local agent/session scratch — must NOT ship publicly
+.superpowers/
+
+# Dependencies & build output
+node_modules/
+.next/
+out/
+coverage/
+
+# Env files (never commit real secrets; .env.example is tracked)
+.env
+.env.local
+.env.*.local
+
+# Logs & OS cruft
+*.log
+.DS_Store
+
+# Generated types & TS build cache
+next-env.d.ts
+*.tsbuildinfo

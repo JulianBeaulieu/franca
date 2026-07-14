@@ -1,0 +1,546 @@
+italian_word,english_translation
+non,not
+di,of/from
+che,that/what
+e,and
+la,the
+il,the
+un,a/an
+a,to/at
+per,for
+in,in
+una,a/an
+mi,me/myself
+ma,but
+lo,it/him
+le,the/them
+si,himself/herself
+ti,you/yourself
+i,the
+con,with
+cosa,thing/what
+se,if
+io,I
+come,how/like
+da,from/since
+ci,us/there
+no,no
+questo,this
+qui,here
+del,of the
+bene,well
+tu,you
+sì,yes
+me,me
+più,more
+al,to the
+mio,my
+perché,why/because
+lei,she
+solo,only/alone
+te,you
+gli,the/to him
+tutto,all/everything
+così,so/like this
+questa,this
+quando,when
+ora,now/hour
+mai,never
+chi,who
+o,or
+alla,to the
+molto,very/much
+anche,also
+quello,that
+niente,nothing
+grazie,thank you
+lui,he
+dove,where
+prima,before
+allora,then/so
+suo,his/her
+tuo,your
+ancora,still/again
+qualcosa,something
+casa,house/home
+su,on
+sempre,always
+ogni,every
+forse,maybe
+vi,you all/yourselves
+loro,they/their
+vita,life
+tempo,time/weather
+quanto,how much
+parte,part
+noi,we
+voi,you all
+essere,to be
+avere,to have
+fare,to do/to make
+dire,to say
+andare,to go
+potere,to be able to/can
+volere,to want
+dovere,to have to/must
+sapere,to know
+vedere,to see
+dare,to give
+stare,to stay/to be
+uscire,to go out
+venire,to come
+parlare,to speak
+prendere,to take
+trovare,to find
+lasciare,to leave/to let
+pensare,to think
+passare,to pass/to spend time
+mettere,to put
+portare,to bring/to carry
+tenere,to hold/to keep
+capire,to understand
+sentire,to hear/to feel
+guardare,to watch/to look
+chiedere,to ask
+rispondere,to answer
+cercare,to look for
+mangiare,to eat
+bere,to drink
+dormire,to sleep
+lavorare,to work
+studiare,to study
+imparare,to learn
+scrivere,to write
+leggere,to read
+camminare,to walk
+correre,to run
+arrivare,to arrive
+partire,to leave/to depart
+tornare,to return
+entrare,to enter
+salire,to go up/to get on
+scendere,to go down/to get off
+comprare,to buy
+vendere,to sell
+pagare,to pay
+costare,to cost
+aprire,to open
+chiudere,to close
+cominciare,to begin/to start
+finire,to finish
+continuare,to continue
+aiutare,to help
+lavare,to wash
+pulire,to clean
+cucinare,to cook
+giocare,to play
+vincere,to win
+perdere,to lose
+cambiare,to change
+provare,to try
+usare,to use
+credere,to believe
+sperare,to hope
+amare,to love
+odiare,to hate
+piacere,to like/to please
+ricordare,to remember
+dimenticare,to forget
+spiegare,to explain
+insegnare,to teach
+chiamare,to call/to name
+ascoltare,to listen
+cantare,to sing
+ridere,to laugh
+nascere,to be born
+morire,to die
+vivere,to live
+abitare,to reside
+viaggiare,to travel
+guidare,to drive
+volare,to fly
+alzarsi,to get up
+sedersi,to sit down
+vestirsi,to get dressed
+lavarsi,to wash oneself
+chiamarsi,to be called
+sentirsi,to feel
+incontrare,to meet
+conoscere,to know a person
+salutare,to greet
+decidere,to decide
+scegliere,to choose
+preferire,to prefer
+servire,to serve/to be useful
+restare,to remain
+diventare,to become
+famiglia,family
+madre,mother
+padre,father
+mamma,mom
+papà,dad
+figlio,son
+figlia,daughter
+fratello,brother
+sorella,sister
+nonno,grandfather
+nonna,grandmother
+zio,uncle
+zia,aunt
+cugino,cousin
+marito,husband
+moglie,wife
+genitori,parents
+bambino,child
+ragazzo,boy
+ragazza,girl
+donna,woman
+uomo,man
+amico,friend
+cibo,food
+acqua,water
+pane,bread
+latte,milk
+caffè,coffee
+tè,tea
+vino,wine
+birra,beer
+succo,juice
+zucchero,sugar
+sale,salt
+formaggio,cheese
+uovo,egg
+carne,meat
+pollo,chicken
+pesce,fish
+frutta,fruit
+verdura,vegetables
+mela,apple
+pomodoro,tomato
+patata,potato
+riso,rice
+pasta,pasta
+pizza,pizza
+dolce,dessert/sweet
+gelato,ice cream
+cioccolato,chocolate
+colazione,breakfast
+pranzo,lunch
+cena,dinner
+piatto,dish/plate
+tavolo,table
+tazza,cup
+forchetta,fork
+coltello,knife
+ristorante,restaurant
+conto,bill
+fame,hunger
+sete,thirst
+zero,zero
+uno,one
+due,two
+tre,three
+quattro,four
+cinque,five
+sei,six
+sette,seven
+otto,eight
+nove,nine
+dieci,ten
+undici,eleven
+dodici,twelve
+tredici,thirteen
+quattordici,fourteen
+quindici,fifteen
+sedici,sixteen
+diciassette,seventeen
+diciotto,eighteen
+diciannove,nineteen
+venti,twenty
+trenta,thirty
+quaranta,forty
+cinquanta,fifty
+sessanta,sixty
+settanta,seventy
+ottanta,eighty
+novanta,ninety
+cento,one hundred
+mille,one thousand
+giorno,day
+settimana,week
+mese,month
+anno,year
+mattina,morning
+pomeriggio,afternoon
+sera,evening
+notte,night
+lunedì,Monday
+martedì,Tuesday
+mercoledì,Wednesday
+giovedì,Thursday
+venerdì,Friday
+sabato,Saturday
+domenica,Sunday
+gennaio,January
+febbraio,February
+marzo,March
+aprile,April
+maggio,May
+giugno,June
+luglio,July
+agosto,August
+settembre,September
+ottobre,October
+novembre,November
+dicembre,December
+primavera,spring
+estate,summer
+autunno,autumn
+inverno,winter
+colore,color
+rosso,red
+blu,blue
+verde,green
+giallo,yellow
+nero,black
+bianco,white
+grigio,gray
+marrone,brown
+rosa,pink
+viola,purple
+arancione,orange
+corpo,body
+testa,head
+viso,face
+occhio,eye
+naso,nose
+bocca,mouth
+orecchio,ear
+capelli,hair
+collo,neck
+spalla,shoulder
+braccio,arm
+mano,hand
+gamba,leg
+piede,foot
+petto,chest
+cuore,heart
+pelle,skin
+dente,tooth
+lingua,tongue/language
+voce,voice
+appartamento,apartment
+camera,room/bedroom
+cucina,kitchen
+bagno,bathroom
+salotto,living room
+porta,door
+finestra,window
+muro,wall
+giardino,garden
+sedia,chair
+letto,bed
+divano,sofa
+armadio,wardrobe
+lampada,lamp
+chiave,key
+borsa,bag
+libro,book
+foto,photo
+telefono,phone
+televisione,television
+computer,computer
+frigorifero,refrigerator
+vestito,dress
+camicia,shirt
+maglietta,t-shirt
+pantaloni,pants
+gonna,skirt
+giacca,jacket
+cappotto,coat
+scarpe,shoes
+calzini,socks
+cappello,hat
+guanti,gloves
+cintura,belt
+occhiali,glasses
+animale,animal
+cane,dog
+gatto,cat
+cavallo,horse
+mucca,cow
+maiale,pig
+pecora,sheep
+gallina,hen
+uccello,bird
+leone,lion
+tigre,tiger
+elefante,elephant
+serpente,snake
+ape,bee
+farfalla,butterfly
+zanzara,mosquito
+ragno,spider
+insetto,insect
+sole,sun
+luna,moon
+stella,star
+cielo,sky
+nuvola,cloud
+pioggia,rain
+neve,snow
+vento,wind
+freddo,cold
+caldo,hot
+mare,sea
+montagna,mountain
+fiume,river
+lago,lake
+albero,tree
+fiore,flower
+terra,earth/land
+fuoco,fire
+lavoro,job/work
+scuola,school
+università,university
+studente,student
+insegnante,teacher
+ufficio,office
+azienda,company
+capo,boss
+collega,colleague
+progetto,project
+compito,homework
+esame,exam
+lezione,lesson
+classe,class
+penna,pen
+matita,pencil
+quaderno,notebook
+zaino,backpack
+domanda,question
+risposta,answer
+soldi,money
+euro,euro
+prezzo,price
+negozio,shop
+mercato,market
+supermercato,supermarket
+contanti,cash
+sconto,discount
+regalo,gift
+cliente,customer
+scontrino,receipt
+gratis,free of charge
+caro,expensive
+economico,inexpensive
+messaggio,message
+email,email
+internet,internet
+sito,website
+pagina,page
+video,video
+musica,music
+film,movie
+notizia,news
+giornale,newspaper
+lettera,letter
+parola,word
+chiamata,call
+salute,health
+medico,doctor
+dottore,doctor
+ospedale,hospital
+farmacia,pharmacy
+medicina,medicine
+malattia,illness
+dolore,pain
+febbre,fever
+raffreddore,cold
+influenza,flu
+città,city
+paese,country/town
+strada,street
+piazza,square
+ponte,bridge
+stazione,station
+aeroporto,airport
+chiesa,church
+museo,museum
+albergo,hotel
+banca,bank
+parco,park
+macchina,car
+auto,car
+treno,train
+autobus,bus
+bicicletta,bicycle
+aereo,airplane
+taxi,taxi
+metro,subway
+viaggio,trip
+biglietto,ticket
+valigia,suitcase
+passaporto,passport
+direzione,direction
+indirizzo,address
+grande,big
+piccolo,small
+lungo,long
+corto,short
+alto,tall
+bello,beautiful
+brutto,ugly
+buono,good
+cattivo,bad
+nuovo,new
+vecchio,old
+giovane,young
+felice,happy
+triste,sad
+stanco,tired
+occupato,busy
+libero,free
+facile,easy
+difficile,difficult
+importante,important
+interessante,interesting
+divertente,fun
+veloce,fast
+lento,slow
+forte,strong
+aperto,open
+chiuso,closed
+ricco,rich
+povero,poor
+sicuro,sure/safe
+simpatico,likeable
+gentile,kind
+amore,love
+paura,fear
+gioia,joy
+rabbia,anger
+sorpresa,surprise
+speranza,hope
+coraggio,courage
+fiducia,trust
+desiderio,desire
+emozione,emotion
+numero,number
+problema,problem
+idea,idea
+verità,truth
+storia,story/history
+mondo,world
+morte,death
+inizio,beginning
+fine,end
+esempio,example
+situazione,situation
+momento,moment
+esperienza,experience
+sogno,dream
+vacanza,vacation
+gruppo,group
+gioco,game
+luce,light
