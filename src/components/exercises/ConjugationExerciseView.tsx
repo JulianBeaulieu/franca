@@ -31,7 +31,7 @@ export function ConjugationExerciseView({
         autoCapitalize="none"
         autoCorrect="off"
         spellCheck={false}
-        className="w-full touch-manipulation rounded-2xl border-2 border-swan px-4 py-3 text-base font-bold text-eel outline-none focus:border-blue"
+        className="w-full touch-manipulation rounded-2xl border-2 border-swan bg-card px-4 py-3 text-base font-bold text-eel placeholder:text-hare outline-none focus:border-blue"
       />
       <div className="flex justify-end">
         <Button

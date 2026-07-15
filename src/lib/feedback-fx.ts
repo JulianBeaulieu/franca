@@ -7,8 +7,8 @@
  * A `typo` is treated as a correct (gentle) answer by the caller, which passes
  * `'correct'` for it.
  */
-import { playHaptic, type HapticEvent } from './haptics';
-import { playComplete, playCorrect, playIncorrect } from './sfx';
+import { playHaptic, warmHaptics, type HapticEvent } from './haptics';
+import { playComplete, playCorrect, playIncorrect, unlockAudio } from './sfx';
 
 export type FeedbackEvent = HapticEvent;
 
@@ -27,4 +27,16 @@ const SOUND: Record<FeedbackEvent, () => void> = {
 export function fireFeedback(event: FeedbackEvent, settings: FeedbackFxSettings): void {
   if (settings.haptics) playHaptic(event);
   if (settings.sounds) SOUND[event]();
+}
+
+/**
+ * Prime audio + haptics from inside the first user gesture of the lesson (call
+ * at the very start of the answer-submit handler). iOS only unlocks the
+ * AudioContext and honours the haptic switch click when they first run
+ * synchronously in a gesture, so warming here makes the subsequent
+ * fireFeedback() reliable. Gated by settings; each call is a safe no-op.
+ */
+export function warmFeedback(settings: FeedbackFxSettings): void {
+  if (settings.haptics) warmHaptics();
+  if (settings.sounds) unlockAudio();
 }

@@ -76,6 +76,10 @@ export default function SettingsPage(): React.JSX.Element {
           <span className="font-extrabold text-eel">Auto-continue</span>
           <Toggle label="Auto-continue" checked={settings.autoContinue} onChange={setAutoContinue} />
         </div>
+        <p className="text-sm font-bold text-hare">
+          Automatically advances to the next question after a correct answer. Wrong and
+          almost-right answers always wait so you can read the correction.
+        </p>
 
         <div className={settings.autoContinue ? 'space-y-2' : 'space-y-2 opacity-50'}>
           <div className="flex items-center justify-between">

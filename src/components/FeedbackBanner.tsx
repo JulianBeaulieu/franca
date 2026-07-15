@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from './Button';
 import { useSettings } from './SettingsProvider';
-import { advanceElapsed, progressFromElapsed } from '@/lib/auto-continue';
+import { advanceElapsed, autoContinueDurationMs, progressFromElapsed } from '@/lib/auto-continue';
 
 /**
  * Drives a 0..1 fill via requestAnimationFrame (not a CSS animation) so the
@@ -70,7 +70,10 @@ export function FeedbackBanner({
   onContinue: () => void;
 }): React.JSX.Element {
   const { settings } = useSettings();
-  const durationMs = settings.autoContinue ? settings.autoContinueSeconds * 1000 : 0;
+  // Auto-continue advances ONLY after a correct answer; 'typo'/'incorrect' wait
+  // indefinitely for a manual Continue so the learner can read the correction.
+  const durationMs = autoContinueDurationMs(settings, status);
+  const timerActive = durationMs > 0;
   const fill = useAutoContinueFill(durationMs, onContinue);
 
   const config = {
@@ -113,7 +116,7 @@ export function FeedbackBanner({
           <Button variant={config.variant} onClick={onContinue}>
             Continue
           </Button>
-          {settings.autoContinue ? (
+          {timerActive ? (
             // Translucent darker layer over the (always green/red) button;
             // reads in both themes. inset-0 matches the button box without
             // clipping its 3D shadow (drawn via box-shadow, outside layout).

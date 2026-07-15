@@ -15,7 +15,7 @@ import {
   evaluateAnswer,
 } from '@/lib/session-core';
 import { MAX_HEARTS } from '@/lib/config';
-import { fireFeedback } from '@/lib/feedback-fx';
+import { fireFeedback, warmFeedback } from '@/lib/feedback-fx';
 import { useSettings } from '@/components/SettingsProvider';
 import type { AnswerResult, Exercise, LessonPlan, RunnerState } from '@/lib/types';
 
@@ -65,6 +65,10 @@ export function useLessonSession(plan: LessonPlan & { courseId: number }): {
   const submit = useCallback(
     (ans: UserAnswer) => {
       if (!current || phase !== 'answering') return;
+      // Prime audio + haptics synchronously in this gesture BEFORE any async
+      // work, so the fireFeedback() below (and every later answer) is reliable
+      // on iOS, where unlocking must happen inside a user gesture.
+      warmFeedback({ haptics: settings.haptics, sounds: settings.sounds });
       const evaln = evaluateAnswer(current, ans);
       const firstGraded = !graded.has(current.conceptId);
       graded.add(current.conceptId);

@@ -26,3 +26,17 @@ export function progressFromElapsed(elapsedMs: number, durationMs: number): numb
   const fraction = elapsedMs / durationMs;
   return fraction >= 1 ? 1 : fraction;
 }
+
+/**
+ * The auto-continue timer must fire ONLY for a correct answer. Wrong/almost-right
+ * answers ('incorrect' | 'typo') always wait indefinitely for a manual Continue
+ * so the learner can read the correction. Returns the timer duration in ms, or 0
+ * (= "no timer", behaves like auto-continue-off) when it must not run.
+ */
+export function autoContinueDurationMs(
+  opts: { autoContinue: boolean; autoContinueSeconds: number },
+  status: 'correct' | 'incorrect' | 'typo',
+): number {
+  if (!opts.autoContinue || status !== 'correct') return 0;
+  return opts.autoContinueSeconds * 1000;
+}

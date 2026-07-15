@@ -8,6 +8,18 @@
  * lazily on the first gesture-driven call and reused; all entry points are
  * silent no-ops on the server or where Web Audio is unavailable, and never
  * throw.
+ *
+ * iOS platform notes (researched 2026-07):
+ *  - The hardware ring/silent switch MUTES Web Audio on iOS Safari (HTML <audio>
+ *    is exempt, Web Audio is not — see WebKit bug 237322). We opt into the
+ *    AudioSession "playback" category (`navigator.audioSession.type`, iOS 16.4+)
+ *    so lesson sounds play even with the silent switch on. If a user still hears
+ *    nothing on iOS < 16.4, that is a platform limitation — the silent switch
+ *    wins and there is no web API to override it on those versions.
+ *  - A freshly created AudioContext is 'suspended' until resume() is called from
+ *    inside a user gesture. We create + resume on the first answer tap (see
+ *    unlockAudio, called from the lesson submit handler) and await resume()
+ *    before scheduling so the very first sound is not dropped.
  */
 
 // ── Master ──────────────────────────────────────────────────────────────────
@@ -51,6 +63,22 @@ function audioContextCtor(): typeof AudioContext | null {
   return w.AudioContext ?? w.webkitAudioContext ?? null;
 }
 
+/**
+ * iOS 16.4+ AudioSession API: setting the type to 'playback' routes Web Audio to
+ * the media channel so the hardware silent switch does not mute it. Absent /
+ * throwing on other platforms — best-effort, never surfaces.
+ */
+function enablePlaybackSession(): void {
+  if (typeof navigator === 'undefined') return;
+  const nav = navigator as Navigator & { audioSession?: { type: string } };
+  if (!nav.audioSession) return;
+  try {
+    nav.audioSession.type = 'playback';
+  } catch {
+    // Read-only / unsupported value — ignore.
+  }
+}
+
 function getCtx(): AudioContext | null {
   if (ctx) return ctx;
   const Ctor = audioContextCtor();
@@ -60,7 +88,28 @@ function getCtx(): AudioContext | null {
   } catch {
     return null;
   }
+  enablePlaybackSession();
   return ctx;
+}
+
+/**
+ * Create + resume the AudioContext from inside a user gesture (call on the first
+ * answer tap) so later plays are reliable. iOS only unlocks audio when resume()
+ * runs synchronously in a gesture; doing it eagerly here avoids the first real
+ * sound racing an un-resumed context. No-op / silent on failure.
+ */
+export function unlockAudio(): void {
+  const context = getCtx();
+  if (!context) return;
+  try {
+    if (context.state === 'suspended') {
+      context.resume().catch(() => {
+        // Best-effort unlock; an eventual rejection must not surface either.
+      });
+    }
+  } catch {
+    // Best-effort unlock; a failure must never surface.
+  }
 }
 
 interface Note {
@@ -92,14 +141,28 @@ function scheduleNote(context: AudioContext, now: number, note: Note): void {
 function playSequence(freqs: number[], type: OscillatorType, dur: number, step: number, peak: number): void {
   const context = getCtx();
   if (!context) return;
+  const schedule = (): void => {
+    try {
+      const now = context.currentTime;
+      freqs.forEach((freq, i) => {
+        scheduleNote(context, now, { freq, start: i * step, duration: dur, type, peak });
+      });
+    } catch {
+      // Web Audio scheduling is best-effort; a failure must never surface.
+    }
+  };
   try {
-    if (context.state === 'suspended') void context.resume();
-    const now = context.currentTime;
-    freqs.forEach((freq, i) => {
-      scheduleNote(context, now, { freq, start: i * step, duration: dur, type, peak });
-    });
+    // Await resume before scheduling: a context still 'suspended' reports a
+    // frozen currentTime, so notes scheduled against it can be dropped on iOS.
+    if (context.state === 'suspended') {
+      void context.resume().then(schedule, () => {
+        // Resume rejected (e.g. no gesture yet) — nothing to play.
+      });
+    } else {
+      schedule();
+    }
   } catch {
-    // Web Audio scheduling is best-effort; a failure must never surface.
+    // Best-effort; a failure must never surface.
   }
 }
 
