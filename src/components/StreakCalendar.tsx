@@ -7,7 +7,7 @@ export function StreakCalendar({ calendar }: { calendar: { date: string; xp: num
           key={d.date}
           title={`${d.date}: ${String(d.xp)} XP`}
           className="h-4 w-4 rounded-sm"
-          style={{ backgroundColor: d.xp > 0 ? '#58CC02' : '#E5E5E5' }}
+          style={{ backgroundColor: d.xp > 0 ? '#58CC02' : 'var(--color-swan)' }}
         />
       ))}
     </div>

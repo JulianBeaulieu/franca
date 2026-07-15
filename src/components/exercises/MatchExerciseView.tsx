@@ -58,7 +58,7 @@ export function MatchExerciseView({
                 ? 'border-green bg-green/10 opacity-40'
                 : sel?.key === t.key
                   ? 'border-blue bg-blue/10'
-                  : 'border-swan bg-white'
+                  : 'border-swan bg-card'
             }`}
           >
             {t.label}

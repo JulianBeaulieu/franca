@@ -19,7 +19,7 @@ export function Card({
         ? 'border-red bg-red/10'
         : selected
           ? 'border-blue bg-blue/10'
-          : 'border-swan bg-white';
+          : 'border-swan bg-card';
   return (
     <button
       type="button"

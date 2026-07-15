@@ -588,12 +588,152 @@ export async function getLearnerCourses(
   );
 }
 
+export async function getDaysActive(learnerId: number): Promise<number> {
+  const rows = await query<{ n: number }>(
+    `SELECT count(*)::int AS n FROM daily_activity WHERE learner_id = $1`,
+    [learnerId],
+  );
+  return rows[0]?.n ?? 0;
+}
+
+// course_id IS NOT NULL matches getCourseStats' treatment of legacy
+// pre-backfill rows: unattributable sessions are "not counted" everywhere,
+// so the global total always equals the sum of the per-course totals.
+export async function getTotalLessonsCompleted(learnerId: number): Promise<number> {
+  const rows = await query<{ n: number }>(
+    `SELECT count(*)::int AS n FROM lesson_session
+     WHERE learner_id = $1 AND completed_at IS NOT NULL AND course_id IS NOT NULL`,
+    [learnerId],
+  );
+  return rows[0]?.n ?? 0;
+}
+
+export interface CourseStatsRow {
+  id: number;
+  code: string;
+  name: string;
+  native_name: string;
+  emoji: string;
+  xp_total: number;
+  words_seen: number;
+  words_mastered: number;
+  lessons_completed: number;
+  avg_accuracy: number;
+  perfect_count: number;
+  best_combo: number;
+}
+
+// Per-course XP/vocab/lesson aggregates for the /stats page, one row per
+// learner_course enrollment, ordered by XP desc. srs_state/lesson_session rows
+// written before 001_phase2.sql's course_id backfill can still be NULL (e.g. an
+// item whose content row was later deleted) — both subqueries filter those out
+// explicitly rather than let them join to the wrong course or blow up the
+// aggregate, so legacy data degrades to "not counted" instead of corrupting a
+// course's totals. Vocab items carry an srs_state row PER DIRECTION
+// (unique on learner/item/type/direction), so word counts use
+// count(DISTINCT item_id) — mirroring getWordsLearned — to count words, not rows.
+export async function getCourseStats(
+  learnerId: number,
+  masteredIntervalDays: number,
+): Promise<CourseStatsRow[]> {
+  return query<CourseStatsRow>(
+    `SELECT c.id, c.code, c.name, c.native_name, c.emoji,
+            COALESCE(lc.xp_total, 0) AS xp_total,
+            COALESCE(w.words_seen, 0) AS words_seen,
+            COALESCE(w.words_mastered, 0) AS words_mastered,
+            COALESCE(l.lessons_completed, 0) AS lessons_completed,
+            COALESCE(l.avg_accuracy, 0) AS avg_accuracy,
+            COALESCE(l.perfect_count, 0) AS perfect_count,
+            COALESCE(l.best_combo, 0) AS best_combo
+     FROM learner_course lc
+     JOIN course c ON c.id = lc.course_id
+     LEFT JOIN (
+       SELECT course_id,
+              count(DISTINCT item_id) FILTER (WHERE state <> 'new')::int AS words_seen,
+              count(DISTINCT item_id) FILTER (WHERE state <> 'new' AND interval >= $2)::int AS words_mastered
+       FROM srs_state
+       WHERE learner_id = $1 AND item_type = 'vocab' AND course_id IS NOT NULL
+       GROUP BY course_id
+     ) w ON w.course_id = c.id
+     LEFT JOIN (
+       SELECT course_id,
+              count(*)::int AS lessons_completed,
+              avg(accuracy)::real AS avg_accuracy,
+              count(*) FILTER (WHERE perfect)::int AS perfect_count,
+              max(combo_max) AS best_combo
+       FROM lesson_session
+       WHERE learner_id = $1 AND completed_at IS NOT NULL AND course_id IS NOT NULL
+       GROUP BY course_id
+     ) l ON l.course_id = c.id
+     WHERE lc.learner_id = $1
+     ORDER BY lc.xp_total DESC`,
+    [learnerId, masteredIntervalDays],
+  );
+}
+
 export async function getActiveCourseId(learnerId: number): Promise<number | null> {
   const rows = await query<{ active_course_id: number | null }>(
     `SELECT active_course_id FROM learner WHERE id = $1`,
     [learnerId],
   );
   return rows[0]?.active_course_id ?? null;
+}
+
+// Raw, possibly-partial/malformed JSONB — callers merge it with
+// src/lib/settings.ts's mergeSettings before trusting any field.
+export async function getLearnerSettings(learnerId: number): Promise<unknown> {
+  const rows = await query<{ settings: unknown }>(
+    `SELECT settings FROM learner WHERE id = $1`,
+    [learnerId],
+  );
+  return rows[0]?.settings ?? {};
+}
+
+// Shallow jsonb merge (Postgres `||`): each key in patch overwrites the same
+// key in the stored object; keys not present in patch are left untouched.
+export async function updateLearnerSettings(learnerId: number, patch: object): Promise<unknown> {
+  const rows = await query<{ settings: unknown }>(
+    `UPDATE learner SET settings = settings || $2::jsonb WHERE id = $1 RETURNING settings`,
+    [learnerId, JSON.stringify(patch)],
+  );
+  return rows[0]?.settings ?? {};
+}
+
+export interface LeaderboardDbRow {
+  id: number;
+  display_name: string | null;
+  email: string | null;
+  picture: string | null;
+  streak_count: number;
+  xp_total: number;
+  weekly_xp: number;
+}
+
+// Privacy gate lives here, in SQL, not in application code: only rows whose
+// settings have leaderboardOptIn === true are ever returned. Unset (no key,
+// or any non-boolean-true value) reads as NULL/"false" from ->> and never
+// equals 'true', so unset means opted out — matching
+// src/lib/settings.ts mergeSettings' default. Every learner is written
+// through validatePatch, which only ever stores an actual JSON boolean for
+// this key, so the text comparison is safe.
+export async function getLeaderboard(
+  weekStartDate: string,
+  weekEndDate: string,
+): Promise<LeaderboardDbRow[]> {
+  return query<LeaderboardDbRow>(
+    `SELECT l.id, l.display_name, l.email, l.picture, l.streak_count, l.xp_total,
+            COALESCE(w.weekly_xp, 0)::int AS weekly_xp
+     FROM learner l
+     LEFT JOIN (
+       SELECT learner_id, sum(xp_earned)::int AS weekly_xp
+       FROM daily_activity
+       WHERE activity_date >= $1 AND activity_date <= $2
+       GROUP BY learner_id
+     ) w ON w.learner_id = l.id
+     WHERE l.settings->>'leaderboardOptIn' = 'true'
+     ORDER BY l.id ASC`,
+    [weekStartDate, weekEndDate],
+  );
 }
 
 export async function setActiveCourse(learnerId: number, courseId: number): Promise<void> {

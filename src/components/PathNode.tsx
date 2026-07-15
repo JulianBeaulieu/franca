@@ -9,8 +9,9 @@ export function PathNode({
   themeColor: string;
   onClick?: () => void;
 }): React.JSX.Element {
-  const bg = state === 'locked' ? '#E5E5E5' : state === 'completed' ? '#FFC800' : themeColor;
-  const shadow = state === 'locked' ? '#CCCCCC' : state === 'completed' ? '#E6B400' : '#00000022';
+  const bg = state === 'locked' ? 'var(--color-swan)' : state === 'completed' ? '#FFC800' : themeColor;
+  const shadow =
+    state === 'locked' ? 'var(--color-swan-shadow)' : state === 'completed' ? '#E6B400' : '#00000022';
   const glyph = state === 'completed' ? '★' : state === 'locked' ? '🔒' : '▶';
   return (
     <button

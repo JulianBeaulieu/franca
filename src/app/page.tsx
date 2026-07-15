@@ -1,11 +1,12 @@
 'use client';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { TopBar } from '@/components/TopBar';
 import { UnitBanner } from '@/components/UnitBanner';
 import { PathNode } from '@/components/PathNode';
 import { Mascot } from '@/components/Mascot';
 import { Button } from '@/components/Button';
+import { isNodeFullyVisible } from '@/lib/path-scroll';
 
 interface UnitRow {
   id: number;
@@ -35,6 +36,11 @@ export default function Home(): React.JSX.Element {
   const router = useRouter();
   const [data, setData] = useState<PathData | null>(null);
   const [error, setError] = useState(false);
+  // The single "next lesson" node (see `nodeState === 'active'` below). Scrolled
+  // into view once per mount so opening the path (or returning from a finished
+  // lesson, which remounts this page) lands the learner on what to do next.
+  const activeNodeRef = useRef<HTMLDivElement | null>(null);
+  const hasScrolledRef = useRef(false);
 
   const loadPath = useCallback(() => {
     setError(false);
@@ -52,6 +58,23 @@ export default function Home(): React.JSX.Element {
   useEffect(() => {
     loadPath();
   }, [loadPath]);
+
+  // Runs synchronously after the path DOM commits (before paint), so the jump
+  // to the active node happens instantly with no visible top-of-page flash.
+  // Always instant (`behavior: 'auto'`, no `scrollIntoView({ behavior: 'smooth' })`
+  // anywhere), which also satisfies prefers-reduced-motion trivially.
+  useLayoutEffect(() => {
+    if (hasScrolledRef.current) return;
+    const node = activeNodeRef.current;
+    if (!node) return;
+    hasScrolledRef.current = true;
+
+    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 0;
+    const rect = node.getBoundingClientRect();
+    if (isNodeFullyVisible(rect, headerHeight, window.innerHeight)) return;
+
+    node.scrollIntoView({ block: 'center', behavior: 'auto' });
+  }, [data]);
 
   if (error) {
     return (
@@ -125,6 +148,7 @@ export default function Home(): React.JSX.Element {
                     return (
                       <div
                         key={row}
+                        ref={nodeState === 'active' ? activeNodeRef : undefined}
                         className="flex flex-col items-center gap-1"
                         style={{
                           transform: `translateX(${String((row % 2 === 0 ? -1 : 1) * 48)}px)`,

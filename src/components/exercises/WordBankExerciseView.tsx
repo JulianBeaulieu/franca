@@ -15,7 +15,7 @@ export function WordBankExerciseView({
 }): React.JSX.Element {
   const [line, setLine] = useState<number[]>([]); // indices into ex.tiles
   const used = new Set(line);
-  const chip = 'rounded-xl border-2 border-swan bg-white px-3 py-2 font-bold text-eel';
+  const chip = 'rounded-xl border-2 border-swan bg-card px-3 py-2 font-bold text-eel';
 
   return (
     <div className="space-y-6">

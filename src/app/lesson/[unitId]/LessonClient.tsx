@@ -118,7 +118,7 @@ function LessonRunner({ plan }: { plan: LessonPlan & { courseId: number } }): Re
   // the upcoming answer; after Continue, fall back to session.current.
   const ex = locked ? session.answeredExercise : session.current;
   return (
-    <main className="flex min-h-screen-safe flex-col bg-white">
+    <main className="flex min-h-screen-safe flex-col bg-surface">
       <div className="mx-auto flex w-full max-w-2xl items-center gap-3 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-4">
         <button
           type="button"

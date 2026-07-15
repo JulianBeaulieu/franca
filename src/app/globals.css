@@ -3,28 +3,59 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Semantic theme tokens. Light values are the app's exact historical colors —
+ * light mode must stay pixel-identical. `.dark` supplies the Duolingo dark
+ * palette (page #131F24, cards #202F36, borders #37464F, text #F1F7FB …).
+ * Consumed via Tailwind color aliases (see tailwind.config.ts) or `var(--…)`.
+ */
 :root {
-  --color-primary-green: #58cc02;
-  --color-primary-green-dark: #58a700;
-  --color-blue: #1cb0f6;
-  --color-blue-dark: #1899d6;
-  --color-red: #ff4b4b;
-  --color-red-dark: #ea2b2b;
-  --color-yellow: #ffc800;
-  --color-yellow-dark: #e6b400;
-  --color-orange: #ff9600;
-  --color-purple: #ce82ff;
-  --color-text: #4b4b4b;
-  --color-text-secondary: #777777;
-  --color-border: #e5e5e5;
-  --color-bg-subtle: #f7f7f7;
-  --color-bg: #ffffff;
+  /* Text */
+  --color-eel: #4b4b4b; /* primary/body text */
+  --color-hare: #777777; /* muted/secondary text */
+  /* Surfaces */
+  --color-surface: #ffffff; /* page/base surface */
+  --color-card: #ffffff; /* raised cards, menus, chips */
+  --color-subtle: #f7f7f7; /* subtle page background */
+  --color-hover: #f7f7f7; /* hover fill on cards/menus */
+  /* Lines & neutral fills */
+  --color-swan: #e5e5e5; /* borders + neutral track fills */
+  --color-swan-shadow: #cccccc; /* 3D shadow under neutral fills */
+  /* Soft accent tints */
+  --color-green-light: #d7ffb8;
+  --color-red-light: #ffdfe0;
+  /* Feedback banner (status-specific bg + text) */
+  --fb-correct-bg: #d7ffb8;
+  --fb-correct-fg: #58a700;
+  --fb-typo-bg: #fff4d6;
+  --fb-typo-fg: #ff9600;
+  --fb-incorrect-bg: #ffdfe0;
+  --fb-incorrect-fg: #ea2b2b;
+}
+
+.dark {
+  --color-eel: #f1f7fb;
+  --color-hare: #dce6ec; /* #52656D fails contrast on #131F24 → lighter tone */
+  --color-surface: #131f24;
+  --color-card: #202f36;
+  --color-subtle: #131f24;
+  --color-hover: #37464f;
+  --color-swan: #37464f;
+  --color-swan-shadow: #16232a;
+  --color-green-light: #384d1c; /* dark green-tinted highlight */
+  --color-red-light: #4a2426; /* dark red-tinted highlight */
+  --fb-correct-bg: #202f36;
+  --fb-correct-fg: #79b933;
+  --fb-typo-bg: #202f36;
+  --fb-typo-fg: #ffb020;
+  --fb-incorrect-bg: #202f36;
+  --fb-incorrect-fg: #ff6b6b;
 }
 
 body {
   font-family: 'Nunito', system-ui, sans-serif;
-  color: var(--color-text);
-  background: var(--color-bg);
+  color: var(--color-eel);
+  background: var(--color-surface);
 }
 
 @layer components {

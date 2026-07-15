@@ -15,6 +15,8 @@ import {
   evaluateAnswer,
 } from '@/lib/session-core';
 import { MAX_HEARTS } from '@/lib/config';
+import { fireFeedback } from '@/lib/feedback-fx';
+import { useSettings } from '@/components/SettingsProvider';
 import type { AnswerResult, Exercise, LessonPlan, RunnerState } from '@/lib/types';
 
 type Phase = 'answering' | 'feedback' | 'complete';
@@ -38,6 +40,7 @@ export function useLessonSession(plan: LessonPlan & { courseId: number }): {
   cont: () => void;
   summary: SessionSummary;
 } {
+  const { settings } = useSettings();
   const factory = useMemo(() => makeRequeueFactory(), []);
   const [state, setState] = useState<RunnerState>(() => initRunner(plan.exercises));
   const [phase, setPhase] = useState<Phase>('answering');
@@ -105,8 +108,15 @@ export function useLessonSession(plan: LessonPlan & { courseId: number }): {
         correctText: evaln.correctText,
       });
       setPhase('feedback');
+      // Fire haptic + sound at the answer event site. A typo counts as a
+      // gentle "correct". Called inside the click handler so the AudioContext
+      // resumes under a user gesture.
+      fireFeedback(evaln.correct || evaln.typo ? 'correct' : 'incorrect', {
+        haptics: settings.haptics,
+        sounds: settings.sounds,
+      });
     },
-    [current, phase, graded, factory, state],
+    [current, phase, graded, factory, state, settings.haptics, settings.sounds],
   );
 
   const cont = useCallback(() => {
@@ -114,6 +124,7 @@ export function useLessonSession(plan: LessonPlan & { courseId: number }): {
     setAnswerSnapshot(null);
     if (isComplete(state)) {
       setPhase('complete');
+      fireFeedback('complete', { haptics: settings.haptics, sounds: settings.sounds });
       void fetch('/api/lesson/complete', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -134,7 +145,7 @@ export function useLessonSession(plan: LessonPlan & { courseId: number }): {
       return;
     }
     setPhase('answering');
-  }, [state, plan]);
+  }, [state, plan, settings.haptics, settings.sounds]);
 
   return {
     current,

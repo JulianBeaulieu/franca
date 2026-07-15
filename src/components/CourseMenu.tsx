@@ -75,7 +75,7 @@ export function CourseMenu({ activeEmoji }: { activeEmoji: string }): React.JSX.
         {activeEmoji}
       </button>
       {open ? (
-        <div className="absolute right-0 z-20 mt-2 w-56 rounded-2xl border-2 border-swan bg-white p-2 shadow-lg">
+        <div className="absolute right-0 z-20 mt-2 w-56 rounded-2xl border-2 border-swan bg-card p-2 shadow-lg">
           {courses === null ? (
             <p className="px-3 py-2 text-sm font-bold text-hare">Loading…</p>
           ) : (
@@ -87,7 +87,7 @@ export function CourseMenu({ activeEmoji }: { activeEmoji: string }): React.JSX.
                   choose(c.id);
                 }}
                 className={`flex w-full touch-manipulation items-center gap-3 rounded-xl px-3 py-2 text-left ${
-                  c.id === activeId ? 'bg-green-light' : 'hover:bg-subtle'
+                  c.id === activeId ? 'bg-green-light' : 'hover:bg-hover'
                 }`}
               >
                 <span className="text-2xl" aria-hidden>

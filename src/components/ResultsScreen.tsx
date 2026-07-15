@@ -13,7 +13,7 @@ export function ResultsScreen({
 }): React.JSX.Element {
   const score = computeLessonScore(summary);
   return (
-    <main className="flex min-h-screen-safe flex-col items-center justify-center gap-6 bg-white p-8 text-center">
+    <main className="flex min-h-screen-safe flex-col items-center justify-center gap-6 bg-surface p-8 text-center">
       <Mascot mood="happy" size={120} />
       <h1 className="text-3xl font-black text-green">Lesson Complete!</h1>
       <div className="flex flex-wrap justify-center gap-4">

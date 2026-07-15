@@ -18,7 +18,7 @@ export function TopBar({
   courseEmoji?: string;
 }): React.JSX.Element {
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between gap-3 border-b border-swan bg-white px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] font-extrabold text-eel">
+    <header className="sticky top-0 z-10 flex items-center justify-between gap-3 border-b border-swan bg-surface px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] font-extrabold text-eel">
       <span className="text-xl font-black text-green">Franca</span>
       <div className="flex items-center gap-3">
         <span className="flex items-center gap-1">
